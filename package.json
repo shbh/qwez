@@ -1,0 +1,37 @@
+{
+  "name": "qwez",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node start.js",
+    "server": "nodemon start.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "author": "Shubham Yadav",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "dependencies": {
+    "bcrypt": "3.0.7",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.2",
+    "concurrently": "^3.5.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.10.2",
+    "nodemon": "^1.17.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-local": "^1.0.0"
+  }
+}
